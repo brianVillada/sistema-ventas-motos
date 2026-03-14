@@ -8,12 +8,14 @@ public class Inventario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_inventario")
     private Long id;
 
     private int cantidad;
 
-    @OneToOne
-    @JoinColumn(name = "producto_id")
-    private Producto producto;
+    private String ubicacion;
 
+    @OneToOne
+    @JoinColumn(name = "id_producto")
+    private Producto producto;
 }
