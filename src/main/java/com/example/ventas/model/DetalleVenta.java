@@ -8,18 +8,20 @@ public class DetalleVenta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_detalle")
     private Long id;
 
     private int cantidad;
 
     private double precio;
 
+    private double subtotal;
+
     @ManyToOne
-    @JoinColumn(name = "venta_id")
+    @JoinColumn(name = "id_venta")
     private Venta venta;
 
     @ManyToOne
-    @JoinColumn(name = "producto_id")
+    @JoinColumn(name = "id_producto")
     private Producto producto;
-
 }
