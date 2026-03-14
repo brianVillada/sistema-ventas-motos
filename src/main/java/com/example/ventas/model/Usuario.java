@@ -8,17 +8,21 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private Long id;
 
-    private String username;
+    private String nombre;
+
+    private String correo;
 
     private String password;
 
+    private boolean activo;
+
     @ManyToOne
-    @JoinColumn(name = "rol_id")
+    @JoinColumn(name = "id_rol")
     private Role rol;
 
     public Usuario() {
     }
-
 }
