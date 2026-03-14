@@ -8,6 +8,7 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private Long id;
 
     private String nombre;
@@ -16,4 +17,5 @@ public class Cliente {
 
     private String direccion;
 
+    private String email;
 }
